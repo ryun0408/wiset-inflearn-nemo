@@ -14,4 +14,5 @@
 
 ## 배포 주소
 - **데이터 분석 대시보드**: [https://ryun0408.github.io/wiset-inflearn-nemo/](https://ryun0408.github.io/wiset-inflearn-nemo/)
-- **발표용 슬라이드 리포트**: [https://ryun0408.github.io/wiset-inflearn-nemo/report/EDA_Presentation.html](https://ryun0408.github.io/wiset-inflearn-nemo/report/EDA_Presentation.html)
+- **발표용 슬라이드 (Bento Style)**: [https://ryun0408.github.io/wiset-inflearn-nemo/report/EDA_Bento_Presentation.html](https://ryun0408.github.io/wiset-inflearn-nemo/report/EDA_Bento_Presentation.html)
+- **발표용 슬라이드 (General Style)**: [https://ryun0408.github.io/wiset-inflearn-nemo/report/EDA_Presentation.html](https://ryun0408.github.io/wiset-inflearn-nemo/report/EDA_Presentation.html)
