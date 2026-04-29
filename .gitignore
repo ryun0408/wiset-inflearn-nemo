@@ -44,8 +44,8 @@ report/*
 !report/nemo_eda_report.md
 !report/EDA_Presentation.md
 !report/EDA_Presentation.html
-!report/EDA_Bento_Presentation.md
-!report/EDA_Bento_Presentation.html
+!report/EDA_Isometric_Presentation.md
+!report/EDA_Isometric_Presentation.html
 scratch/
 .ipynb_checkpoints/
 
