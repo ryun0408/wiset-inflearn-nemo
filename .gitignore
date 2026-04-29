@@ -42,6 +42,8 @@ Thumbs.db
 data/
 report/*
 !report/nemo_eda_report.md
+!report/EDA_Presentation.md
+!report/EDA_Presentation.html
 scratch/
 .ipynb_checkpoints/
 
