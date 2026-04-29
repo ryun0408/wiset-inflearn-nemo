@@ -7,13 +7,13 @@ footer: 'Data Architecture & Insights'
 backgroundColor: #1E1E2E
 style: |
   @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Space+Mono&display=swap');
   
   section {
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
     background-color: #1E1E2E;
     color: #FFFFFF;
-    padding: 40px 60px;
+    padding: 50px 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,42 +22,44 @@ style: |
   h1 { 
     font-family: 'Barlow Condensed', sans-serif;
     color: #FFFFFF;
-    font-size: 3.2em; /* Reduced from 3.8em */
+    font-size: 3.4em;
     text-transform: uppercase;
-    margin-bottom: 0.1em;
+    margin: 0;
     letter-spacing: -1px;
     font-weight: 800;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
   }
   
   h2 {
     font-family: 'Pretendard', sans-serif;
     color: #A594FF;
-    font-size: 1.5em; /* Reduced from 1.8em */
+    font-size: 1.6em;
     font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 25px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    opacity: 0.9;
   }
 
   .iso-layout {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70%;
-    gap: 40px;
+    height: 65%;
+    gap: 60px;
   }
 
   .iso-visual {
-    flex: 1;
+    flex: 1.3;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
   }
 
   .iso-content {
-    flex: 1.2;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,24 +68,24 @@ style: |
   /* Isometric Block System */
   .block-group {
     position: relative;
-    width: 220px;
-    height: 220px;
+    width: 250px;
+    height: 250px;
   }
 
   .cube {
     position: absolute;
-    width: 100px;
-    height: 70px;
-    background: #6254E8; /* Right face */
+    width: 110px;
+    height: 75px;
+    background: #6254E8;
   }
 
   .cube::before {
     content: '';
     position: absolute;
-    left: -25px;
-    width: 25px;
+    left: -28px;
+    width: 28px;
     height: 100%;
-    background: #4A3FCC; /* Left face */
+    background: #4A3FCC;
     transform: skewY(45deg);
     transform-origin: right;
   }
@@ -91,10 +93,10 @@ style: |
   .cube::after {
     content: '';
     position: absolute;
-    top: -25px;
+    top: -28px;
     width: 100%;
-    height: 25px;
-    background: #7C6FFF; /* Top face */
+    height: 28px;
+    background: #7C6FFF;
     transform: skewX(45deg);
     transform-origin: bottom;
   }
@@ -104,55 +106,52 @@ style: |
   }
 
   .stat-box {
-    background: rgba(124, 111, 255, 0.15);
-    border-left: 4px solid #A594FF;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 0 10px 10px 0;
+    background: rgba(124, 111, 255, 0.12);
+    border-left: 5px solid #A594FF;
+    padding: 22px;
+    margin: 12px 0;
+    border-radius: 0 15px 15px 0;
   }
 
   .stat-value {
-    font-size: 2.3em; /* Reduced from 2.8em */
+    font-size: 2.5em;
     font-weight: 800;
     color: #E8FF3B;
     line-height: 1.1;
   }
 
   .label {
-    font-size: 0.85em;
+    font-size: 0.9em;
     color: #A594FF;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 700;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
   }
 
-  .grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    width: 100%;
-  }
-
-  footer { font-size: 0.5em; color: #6254E8; }
-  header { font-size: 0.6em; color: #A594FF; opacity: 0.5; }
+  footer { font-size: 0.5em; color: #6254E8; position: absolute; bottom: 30px; left: 80px; }
+  header { font-size: 0.6em; color: #A594FF; opacity: 0.5; position: absolute; top: 30px; left: 80px; }
   
   img {
     border: 3px solid #6254E8;
-    box-shadow: 15px 15px 0 rgba(124, 111, 255, 0.15);
+    box-shadow: 18px 18px 0 rgba(124, 111, 255, 0.12);
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
-    border-radius: 12px;
+    border-radius: 15px;
   }
 
   .header-icon {
-    font-size: 0.8em;
-    display: inline-block;
-    background: rgba(165, 148, 255, 0.2);
-    padding: 10px;
-    border-radius: 12px;
-    border: 1px solid #A594FF;
+    font-size: 0.75em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(165, 148, 255, 0.15);
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    border: 2px solid #A594FF;
+    flex-shrink: 0;
   }
 ---
 
@@ -160,20 +159,20 @@ style: |
 ## Nemo Real Estate Analytics
 
 <div class="iso-layout">
+  <div class="iso-visual">
+    <div class="block-group">
+      <div class="cube cube-highlight" style="top: 50px; left: 90px; z-index: 3;"></div>
+      <div class="cube" style="top: 110px; left: 40px; z-index: 2;"></div>
+      <div class="cube" style="top: 170px; left: 0px; z-index: 1;"></div>
+    </div>
+  </div>
   <div class="iso-content">
-    <p style="font-size: 1.2em; line-height: 1.5; font-weight: 600;">20년 경력의 데이터 사이언티스트가<br>분석한 강남/서초 상권의 구조적 통찰</p>
+    <p style="font-size: 1.25em; line-height: 1.6; font-weight: 600; margin-bottom: 20px;">20년 경력의 데이터 사이언티스트가<br>분석한 강남/서초 상권의 구조적 통찰</p>
     <div class="stat-box">
       <div class="label">Analysis Target</div>
       <div class="stat-value">673 SAMPLES</div>
     </div>
-    <p style="opacity: 0.7; font-size: 0.9em; margin-top: 5px;">건축적 관점과 데이터 공학적 관점을 결합한<br>입체적 시장 분석 리포트입니다.</p>
-  </div>
-  <div class="iso-visual">
-    <div class="block-group">
-      <div class="cube cube-highlight" style="top: 50px; left: 80px; z-index: 3;"></div>
-      <div class="cube" style="top: 100px; left: 40px; z-index: 2;"></div>
-      <div class="cube" style="top: 150px; left: 0px; z-index: 1;"></div>
-    </div>
+    <p style="opacity: 0.7; font-size: 0.95em; margin-top: 10px;">데이터 공학적 관점으로 분석한<br>입체적 시장 리포트입니다.</p>
   </div>
 </div>
 
@@ -185,8 +184,8 @@ style: |
 <div class="iso-layout">
   <div class="iso-visual">
     <div class="block-group">
-      <div class="cube" style="top: 70px; left: 90px; height: 110px; background: #FF6B6B;"></div>
-      <div class="cube" style="top: 120px; left: 30px; height: 50px;"></div>
+      <div class="cube" style="top: 60px; left: 100px; height: 120px; background: #FF6B6B;"></div>
+      <div class="cube" style="top: 120px; left: 30px; height: 60px;"></div>
     </div>
   </div>
   <div class="iso-content">
@@ -198,7 +197,7 @@ style: |
       <div class="label">Avg Monthly Rent</div>
       <div class="stat-value">534만</div>
     </div>
-    <p style="font-size: 1em; font-weight: 500; margin-top: 10px;">입지 간의 위계가 명확하며<br>고정비 부담이 높은 구조입니다.</p>
+    <p style="font-size: 1.05em; font-weight: 500; margin-top: 15px; line-height: 1.5;">입지 간의 위계가 명확하며<br>고정비 부담이 높은 구조입니다.</p>
   </div>
 </div>
 
@@ -208,18 +207,18 @@ style: |
 ## 보증금 및 월세 양극화 분석
 
 <div class="iso-layout">
+  <div class="iso-visual">
+    <div class="block-group">
+      <div class="cube cube-highlight" style="top: 30px; left: 100px; height: 180px;"></div>
+      <div class="cube" style="top: 160px; left: 20px; height: 45px; opacity: 0.5;"></div>
+    </div>
+  </div>
   <div class="iso-content">
     <div class="stat-box">
       <div class="label">Top 10% Cluster</div>
       <div class="stat-value">1.5억 / 1,000만+</div>
     </div>
-    <p style="margin-top: 20px; font-size: 1.05em; line-height: 1.5;"><b>핵심 통찰:</b><br>단순 판매를 넘어 브랜드 가치를 증명하는<br><span style="color: #E8FF3B; font-weight: 700;">'플래그십' 요충지</span>로서의 성격이 강함</p>
-  </div>
-  <div class="iso-visual">
-    <div class="block-group">
-      <div class="cube cube-highlight" style="top: 30px; left: 90px; height: 160px;"></div>
-      <div class="cube" style="top: 140px; left: 20px; height: 35px; opacity: 0.5;"></div>
-    </div>
+    <p style="margin-top: 25px; font-size: 1.1em; line-height: 1.6;">단순 판매를 넘어 브랜드 가치를 증명하는<br><span style="color: #E8FF3B; font-weight: 700;">'플래그십' 요충지</span>로서의 성격이 강함</p>
   </div>
 </div>
 
@@ -231,14 +230,14 @@ style: |
 <div class="iso-layout">
   <div class="iso-visual">
     <div class="block-group">
-      <div class="cube" style="top: 90px; left: 40px; width: 180px;"></div>
-      <div class="cube cube-highlight" style="top: 140px; left: 90px; width: 90px;"></div>
+      <div class="cube" style="top: 90px; left: 40px; width: 190px;"></div>
+      <div class="cube cube-highlight" style="top: 150px; left: 100px; width: 95px;"></div>
     </div>
   </div>
   <div class="iso-content">
     <div class="label">임대 비율</div>
-    <div class="stat-value" style="font-size: 4em; margin-bottom: 10px;">99%</div>
-    <p style="font-size: 1.15em; line-height: 1.5; font-weight: 600;">오프라인 공간의 기능이<br><span style="color: #E8FF3B;">'판매'에서 '체험'</span>으로<br>완전한 패러다임 전환</p>
+    <div class="stat-value" style="font-size: 4.2em; margin-bottom: 15px;">99%</div>
+    <p style="font-size: 1.2em; line-height: 1.6; font-weight: 600;">오프라인 공간의 기능이<br><span style="color: #E8FF3B;">'판매'에서 '체험'</span>으로<br>완전한 패러다임 전환</p>
   </div>
 </div>
 
@@ -248,15 +247,15 @@ style: |
 ## TF-IDF 키워드 분석
 
 <div class="iso-layout">
-  <div class="iso-content" style="flex: 0.95;">
+  <div class="iso-visual">
+    <img src="../images/tfidf_keywords.png">
+  </div>
+  <div class="iso-content">
     <div class="stat-box">
       <div class="label">Core Tag</div>
-      <div style="font-size: 1.6em; font-weight: 800; color: #4ECDC4; margin-top: 5px;">#무권리 #역세권</div>
+      <div style="font-size: 1.7em; font-weight: 800; color: #4ECDC4; margin-top: 8px;">#무권리 #역세권</div>
     </div>
-    <p style="font-size: 1.05em; line-height: 1.5; margin-top: 10px;">CapEx 절감을 노리는<br>실속형 창업 수요가<br>키워드에 그대로 투영됨</p>
-  </div>
-  <div class="iso-visual" style="flex: 1.25;">
-    <img src="../images/tfidf_keywords.png">
+    <p style="font-size: 1.1em; line-height: 1.5; margin-top: 15px;">CapEx 절감을 노리는<br>실속형 창업 수요가<br>키워드에 그대로 투영됨</p>
   </div>
 </div>
 
@@ -266,12 +265,15 @@ style: |
 ## 면적 대비 월세 상관관계
 
 <div class="iso-layout">
-  <div class="iso-visual" style="flex: 1.25;">
+  <div class="iso-visual">
     <img src="../images/scatter_size_rent.png">
   </div>
-  <div class="iso-content" style="flex: 0.95;">
-    <h2 style="margin-bottom: 8px;">'골든 존' 포착</h2>
-    <p style="font-size: 1.1em; line-height: 1.5;">면적의 경제보다<br><b>'입지의 경제'</b>가 압도적</p>
+  <div class="iso-content">
+    <div class="stat-box">
+      <div class="label">Market Insight</div>
+      <div style="font-size: 1.5em; font-weight: 700; margin-bottom: 5px;">'골든 존' 포착</div>
+      <p style="font-size: 1.1em; line-height: 1.4;">면적의 경제보다<br><b>'입지의 경제'</b>가 압도적</p>
+    </div>
     <div class="stat-box">
       <div class="label">Efficiency</div>
       <div class="stat-value">HIGH</div>
@@ -284,13 +286,18 @@ style: |
 # <span class="header-icon">💰</span> CATEGORY
 ## 업종별 평균 보증금 추이
 
-<div class="iso-layout" style="flex-direction: column; justify-content: center;">
-  <div style="height: 65%; width: 100%; display: flex; justify-content: center;">
-    <img src="../images/barh_biz_deposit.png" style="width: auto;">
+<div class="iso-layout">
+  <div class="iso-visual">
+    <img src="../images/barh_biz_deposit.png">
   </div>
-  <p style="text-align: center; width: 90%; font-size: 1.1em; font-weight: 600; margin-top: 25px; line-height: 1.4;">
-    시설 비중이 큰 업종일수록 원상복구 리스크를 반영한 <span style="color:#FF6B6B;">고액 보증금</span> 형성
-  </p>
+  <div class="iso-content">
+    <div class="stat-box">
+      <div class="label">Risk Factors</div>
+      <p style="font-size: 1.15em; font-weight: 600; line-height: 1.5;">
+        시설 비중이 큰 업종일수록<br>원상복구 리스크를 반영한<br><span style="color:#FF6B6B;">고액 보증금</span> 형성
+      </p>
+    </div>
+  </div>
 </div>
 
 ---
@@ -299,15 +306,15 @@ style: |
 ## 층별 가치 분포 비교
 
 <div class="iso-layout">
-  <div class="iso-content" style="flex: 0.95;">
+  <div class="iso-visual">
+    <img src="../images/scatter_dep_rent_floor.png">
+  </div>
+  <div class="iso-content">
     <div class="stat-box">
       <div class="label">1F Premium</div>
       <div class="stat-value">MAXIMUM</div>
     </div>
-    <p style="font-size: 1em; line-height: 1.5; margin-top: 10px;">목적형 방문 업종은<br>상층부 선택을 통해<br><b>고정비 효율화</b>를<br>꾀하는 것이 유리</p>
-  </div>
-  <div class="iso-visual" style="flex: 1.25;">
-    <img src="../images/scatter_dep_rent_floor.png">
+    <p style="font-size: 1.1em; line-height: 1.5; margin-top: 15px;">목적형 방문 업종은<br>상층부 선택을 통해<br><b>고정비 효율화</b>를<br>꾀하는 것이 유리</p>
   </div>
 </div>
 
@@ -317,15 +324,15 @@ style: |
 ## 지하철역별 매물 공급 현황
 
 <div class="iso-layout">
-  <div class="iso-visual" style="flex: 1.25;">
+  <div class="iso-visual">
     <img src="../images/bar_subway_count.png">
   </div>
-  <div class="iso-content" style="flex: 0.95;">
+  <div class="iso-content">
     <div class="stat-box">
       <div class="label">Hot Zones</div>
-      <div style="font-size: 1.6em; font-weight: 800; color: #E8FF3B; margin-top: 5px;">강남 / 역삼 / 신논현</div>
+      <div style="font-size: 1.7em; font-weight: 800; color: #E8FF3B; margin-top: 8px;">강남 / 역삼 / 신논현</div>
     </div>
-    <p style="font-size: 1em; line-height: 1.5; margin-top: 10px;">테헤란로 핵심 축을 중심으로<br>공급이 밀집된 구조적 특징</p>
+    <p style="font-size: 1.1em; line-height: 1.5; margin-top: 15px;">테헤란로 핵심 축을 중심으로<br>공급이 밀집된 구조적 특징</p>
   </div>
 </div>
 
@@ -335,15 +342,15 @@ style: |
 ## 면적당 가격 효율성 분포
 
 <div class="iso-layout">
+  <div class="iso-visual">
+    <img src="../images/hist_area_price.png">
+  </div>
   <div class="iso-content">
     <div class="stat-box">
       <div class="label">Market Price</div>
       <div class="stat-value">90 ~ 192</div>
     </div>
-    <p style="font-size: 1em; line-height: 1.5; margin-top: 10px;">분포 범위를 벗어난 매물은<br>입지적 특수성 혹은<br><span style="color:#FF6B6B; font-weight: 700;">권리 관계 검토</span> 필수</p>
-  </div>
-  <div class="iso-visual">
-    <img src="../images/hist_area_price.png">
+    <p style="font-size: 1.1em; line-height: 1.5; margin-top: 15px;">분포 범위를 벗어난 매물은<br>입지적 특수성 혹은<br><span style="color:#FF6B6B; font-weight: 700;">권리 관계 검토</span> 필수</p>
   </div>
 </div>
 
@@ -352,23 +359,25 @@ style: |
 # <span class="header-icon">💡</span> STRATEGY
 ## 결론 및 종합 전략 제언
 
-<div class="iso-layout" style="height: 65%;">
-  <div class="grid-2">
+<div class="iso-layout">
+  <div class="iso-content">
     <div class="stat-box">
       <div class="label">01. CASH FLOW</div>
-      <p style="font-size: 1em; font-weight: 600;">무권리 매물 선점으로<br>초기 리스크 최소화</p>
+      <p style="font-size: 1.1em; font-weight: 600;">무권리 매물 선점으로<br>초기 리스크 최소화</p>
     </div>
     <div class="stat-box">
       <div class="label">02. LOCATION</div>
-      <p style="font-size: 1em; font-weight: 600;">초역세권 핵심 동선 위주<br>입지 위계 분석</p>
+      <p style="font-size: 1.1em; font-weight: 600;">초역세권 핵심 동선 위주<br>입지 위계 분석</p>
     </div>
+  </div>
+  <div class="iso-content">
     <div class="stat-box">
       <div class="label">03. EXIT PLAN</div>
-      <p style="font-size: 1em; font-weight: 600;">다용도 특성 활용,<br>업종 변경 용이성 확보</p>
+      <p style="font-size: 1.1em; font-weight: 600;">다용도 특성 활용,<br>업종 변경 용이성 확보</p>
     </div>
     <div class="stat-box">
       <div class="label">04. DATA-DRIVEN</div>
-      <p style="font-size: 1em; font-weight: 600;">객관적 지표 근거<br>임대료 협상 우위 점유</p>
+      <p style="font-size: 1.1em; font-weight: 600;">객관적 지표 근거<br>임대료 협상 우위 점유</p>
     </div>
   </div>
 </div>
@@ -381,15 +390,15 @@ style: |
 <div class="iso-layout">
   <div class="iso-visual">
     <div class="block-group">
-      <div class="cube" style="top: 35px; left: 90px;"></div>
-      <div class="cube cube-highlight" style="top: 90px; left: 145px;"></div>
-      <div class="cube" style="top: 145px; left: 90px;"></div>
-      <div class="cube" style="top: 90px; left: 35px;"></div>
+      <div class="cube" style="top: 40px; left: 100px;"></div>
+      <div class="cube cube-highlight" style="top: 100px; left: 160px;"></div>
+      <div class="cube" style="top: 160px; left: 100px;"></div>
+      <div class="cube" style="top: 100px; left: 40px;"></div>
     </div>
   </div>
   <div class="iso-content">
-    <h1 style="font-size: 2.8em; letter-spacing: -2px;">THANK YOU</h1>
-    <p style="color: #A594FF; font-weight: 800; font-size: 1.3em; margin-bottom: 5px;">Nemo Real Estate Analytics</p>
-    <p style="opacity: 0.7; font-size: 1em;">숫자 너머의 가치를 설계합니다.</p>
+    <h1 style="font-size: 3em; letter-spacing: -2px;">THANK YOU</h1>
+    <p style="color: #A594FF; font-weight: 800; font-size: 1.4em; margin-bottom: 10px;">Nemo Real Estate Analytics</p>
+    <p style="opacity: 0.7; font-size: 1.1em;">숫자 너머의 가치를 설계합니다.</p>
   </div>
 </div>
