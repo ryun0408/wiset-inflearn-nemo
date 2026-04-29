@@ -41,6 +41,7 @@ Thumbs.db
 # Data & Reports
 data/
 report/
+!report/nemo_eda_report.md
 scratch/
 .ipynb_checkpoints/
 
